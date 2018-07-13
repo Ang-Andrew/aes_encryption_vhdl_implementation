@@ -11,6 +11,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
 use work.aes_encryption_lib.all;
 
 entity aes_encryption_mixColumns is

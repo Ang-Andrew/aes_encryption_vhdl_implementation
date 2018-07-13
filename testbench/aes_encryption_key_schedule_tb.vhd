@@ -11,10 +11,12 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
 use work.aes_encryption_lib.all;
 
 entity aes_encryption_key_schedule_tb is
---  Port ( );
+  -- No ports in top-level testbench
 end aes_encryption_key_schedule_tb;
 
 architecture Behavioral of aes_encryption_key_schedule_tb is

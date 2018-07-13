@@ -7,11 +7,15 @@
 -- Tool Versions: Vivado 2018.1
 -- Description: testbench for mixColumns algorithm 
 ----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
 use work.aes_encryption_lib.all;
 
 entity aes_encyrption_mixColumns_tb is
+  -- No ports in top-level testbench
 end aes_encyrption_mixColumns_tb;
 
 architecture Behavioral of aes_encyrption_mixColumns_tb is

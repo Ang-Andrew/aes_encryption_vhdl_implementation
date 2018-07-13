@@ -7,11 +7,15 @@
 -- Tool Versions: Vivado 2018.1
 -- Description: ShiftRows testbench
 ----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
 use work.aes_encryption_lib.State;
 
 entity aes_encryption_ShiftRows_tb is
+  -- No ports in top-level testbench
 end aes_encryption_ShiftRows_tb;
 
 architecture Behavioral of aes_encryption_ShiftRows_tb is

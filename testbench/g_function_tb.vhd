@@ -8,13 +8,14 @@
 -- Description: testbench for g-function
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
 use work.aes_encryption_lib.all; 
 
 entity g_function_tb is
---  Port ( );
+  -- No ports in top-level testbench
 end g_function_tb;
 
 architecture Behavioral of g_function_tb is

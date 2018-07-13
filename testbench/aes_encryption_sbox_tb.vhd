@@ -10,22 +10,25 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+
+library work;
 use work.aes_encryption_lib.all;
 
 entity aes_encryption_sbox_tb is
+  -- No ports in top-level testbench
 end aes_encryption_sbox_tb;
 
 architecture Behavioral of aes_encryption_sbox_tb is
 
     component aes_encryption_sbox is
         Port ( 
-            i_byte              : in Byte;
-            o_byte              : out Byte                  
+            i_byte              : in std_logic_vector(7 downto 0);
+            o_byte              : out std_logic_vector(7 downto 0)                  
         );
     end component aes_encryption_sbox;
     
-    signal tb_i_byte            : Byte;
-    signal tb_o_byte            : Byte;
+    signal tb_i_byte            : std_logic_vector(7 downto 0);
+    signal tb_o_byte            : std_logic_vector(7 downto 0);
     
 begin
     
