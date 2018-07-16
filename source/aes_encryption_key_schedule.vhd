@@ -27,7 +27,6 @@ architecture Behavioral of aes_encryption_key_schedule is
 
   signal temp_key_schedule  : Key_schedule;
   signal g_func_schedule    : Key_schedule;
-  signal rcon_sel           : integer := 0;
   signal key_schedule_mod_4 : Key_schedule;
 
 begin
