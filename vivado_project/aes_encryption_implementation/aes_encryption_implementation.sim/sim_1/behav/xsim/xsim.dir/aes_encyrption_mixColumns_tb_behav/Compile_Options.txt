@@ -1,0 +1,1 @@
+-wto "32ba1800294b4335a059dc7c1c7eb1ce" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "aes_encyrption_mixColumns_tb_behav" "xil_defaultlib.aes_encyrption_mixColumns_tb" -log "elaborate.log" 
