@@ -48,8 +48,9 @@ begin
       o_key_schedule => key_schedule
       );
 
-  aes_first_round : entity work.aes_encryption_key_addition
+    aes_first_round : entity work.aes_encryption_key_addition
     port map(
+      clock   => clock,  
       i_state => i_state,
       i_key   => i_key,
       o_state => first_output_state

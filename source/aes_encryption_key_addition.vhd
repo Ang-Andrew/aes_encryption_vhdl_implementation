@@ -17,6 +17,7 @@ use work.aes_encryption_lib.all;
 
 entity aes_encryption_key_addition is
   port (
+    clock   : in  std_logic;
     i_state : in  State;
     i_key   : in  Key;
     o_state : out State
@@ -27,11 +28,16 @@ architecture Behavioral of aes_encryption_key_addition is
 
 begin
 
-  key_addition : for i in 0 to 3 generate
-    o_state(i) <= (i_state(i)(0) xor i_key(i)(0),
-                   i_state(i)(1) xor i_key(i)(1),
-                   i_state(i)(2) xor i_key(i)(2),
-                   i_state(i)(3) xor i_key(i)(3));
-  end generate;
+    process(clock)
+    begin
+        if rising_edge(clock) then
+            for i in 0 to 3 loop
+                o_state(i) <= (i_state(i)(0) xor i_key(i)(0),
+                               i_state(i)(1) xor i_key(i)(1),
+                               i_state(i)(2) xor i_key(i)(2),
+                               i_state(i)(3) xor i_key(i)(3));
+            end loop;
+        end if;
+    end process;
 
 end Behavioral;

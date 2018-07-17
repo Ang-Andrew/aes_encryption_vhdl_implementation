@@ -592,3 +592,383 @@ selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cM, ch)
 // Tcl Message: refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1384.879 ; gain = 45.605 
 // Elapsed time: 10 seconds
 dismissDialog("Reloading"); // bv (ch)
+// Elapsed time: 144 seconds
+selectCodeEditor("aes_encryption_sbox.vhd", 474, 165); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_lib.vhd", 4); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 92, 250); // cd (w, ch)
+// Elapsed time: 31 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 215, 266); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 68, 259); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 69, 243); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 65, 245, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 38 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 209, 165); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 228, 175); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 210, 152); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 227, 168); // cd (w, ch)
+// Elapsed time: 43 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 158, 158); // cd (w, ch)
+// Elapsed time: 38 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 89, 254); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 204, 267); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 204, 267, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 70, 320); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 79, 312); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 71, 294); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("aes_encryption_implementation.vhd", 64, 301); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 17 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 25 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 183, 265); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_implementation.vhd", 'v'); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("aes_encryption_implementation.vhd", 202, 273); // cd (w, ch)
+// Elapsed time: 26 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 290, 126); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 222, 106); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 207, 249); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 207, 249, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 108, 320); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 108, 320, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 238, 297); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 226, 308); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 200, 324); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 200, 324, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 212, 315); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 212, 315, false, false, false, false, true); // cd (w, ch) - Double Click
+// [GUI Memory]: 145 MB (+356kb) [01:16:45]
+selectCodeEditor("aes_encryption_implementation.vhd", 212, 289); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 211, 289, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 213, 280); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 213, 280, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 213, 280, false, false, false, true, false); // cd (w, ch) - Popup Trigger
+selectMenuItem(PAResourceOtoP.PACodeEditor_GOTO_DEFINITION, "Go to Definition"); // ac (ai, Popup.HeavyWeightWindow)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3, false, true); // k (j, ch) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 131, 309); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 169, 319); // cd (w, ch)
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("aes_encryption_key_addition.vhd", 141, 391); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 190, 354); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 208, 319); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 217, 344); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 191, 383); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 208, 375); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("aes_encryption_key_addition.vhd", 121, 364); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_key_addition.vhd", 112, 532); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 44, 535); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 38, 533); // cd (w, ch)
+// Elapsed time: 39 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 124, 655); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 290, 684); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 200, 637); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 194, 646); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 226, 619); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_key_addition.vhd", 208, 554); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 167, 556); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 33, 560); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("aes_encryption_key_addition.vhd", 181, 493); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 186, 637); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_key_addition.vhd", 148, 569); // cd (w, ch)
+// Elapsed time: 35 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 125, 633); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 158, 584); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 143, 646); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 139, 639); // cd (w, ch)
+// Elapsed time: 13 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 160, 635); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 139, 357); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 135, 349); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 135, 349, false, false, false, false, true); // cd (w, ch) - Double Click
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_lib.vhd", 4); // k (j, ch)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 148, 353); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 148, 353, false, false, false, false, true); // cd (w, ch) - Double Click
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("aes_encryption_key_addition.vhd", 124, 652); // cd (w, ch)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_key_addition.vhd", 143, 641); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 110, 591); // cd (w, ch)
+// Elapsed time: 48 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 223, 565); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 226, 556); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("aes_encryption_key_addition.vhd", 170, 617); // cd (w, ch)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 12 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 228, 555); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 228, 555, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 508, 614); // cd (w, ch)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 10 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 232, 556); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 261, 554); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 67 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 290, 550); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 296, 532); // cd (w, ch)
+// Elapsed time: 21 seconds
+selectCodeEditor("aes_encryption_key_addition.vhd", 288, 599); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_key_addition.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 463, 572); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 239, 563); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 136, 569); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 460, 627); // cd (w, ch)
+selectCodeEditor("aes_encryption_key_addition.vhd", 317, 465); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_key_addition.vhd", 780, 400); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_key_addition.vhd", 'c'); // cd (w, ch)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("aes_encryption_key_addition.vhd", 1040, 496); // cd (w, ch)
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cM, ch)
+// bv (ch):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_FAIL
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1384.879 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: ERROR: [Synth 8-2029] formal clock has no actual or default value [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_rounds.vhd:56] 
+// Tcl Message: INFO: [Synth 8-994] clock is declared here [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_key_addition.vhd:20] INFO: [Synth 8-2810] unit behavioral ignored due to previous errors [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_rounds.vhd:26] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1384.879 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.  
+// M (ch): Critical Messages: addNotify
+dismissDialog("Reloading"); // bv (ch)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (M)
+dismissDialog("Critical Messages"); // M (ch)
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aC, ch)
+closeTask("RTL Analysis", "Elaborated Design", "DesignTask.RTL_PLANNING");
+// TclEventType: DESIGN_CLOSE
+// Engine heap size: 1,272 MB. GUI used memory: 66 MB. Current time: 7/17/18 9:55:18 PM AEST
+// TclEventType: CURR_DESIGN_SET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,272 MB. GUI used memory: 66 MB. Current time: 7/17/18 9:55:18 PM AEST
+// TclEventType: DESIGN_CLOSE
+// Tcl Message: close_design 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 1); // k (j, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 321, 161); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 54, 349); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 17 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 359, 328); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 609, 239); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_implementation.vhd", 'c'); // cd (w, ch)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("aes_encryption_implementation.vhd", 952, 231); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 873, 264); // cd (w, ch)
