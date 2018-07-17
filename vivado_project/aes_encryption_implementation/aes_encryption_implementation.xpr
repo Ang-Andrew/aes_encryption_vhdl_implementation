@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="36" Path="D:/vivado_projects/aes_encryption_implementation/aes_encryption_implementation.xpr">
+<Project Version="7" Minor="36" Path="D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="32ba1800294b4335a059dc7c1c7eb1ce"/>
@@ -57,90 +57,105 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_lib.vhd">
-        <FileInfo RelPath="aes_encryption_lib.vhd">
-          <Attr Name="Library" Val="xil_defaultlib"/>
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_lib.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_lib.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_ShiftRows.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_ShiftRows.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_ShiftRows.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_implementation.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_sbox.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_sbox.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_key_addition.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/g_function.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/g_function.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_key_schedule.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_key_schedule.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_key_schedule.vhd"/>
+          <Attr Name="ImportTime" Val="1531745366"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_last_round.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_key_addition.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_key_addition.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_mixColumns.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_mixColumns.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_mixColumns.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_rounds.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_rounds.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_rounds.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Downloads/aes_encryption_sbox.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_last_round.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="C:/Users/Andrew/Downloads/aes_encryption_sbox.vhd"/>
-          <Attr Name="ImportTime" Val="1529324878"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_last_round.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/g_function.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/mult_by_2.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/mult_by_2.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mult_by_2.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/mult_by_3.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/mult_by_3.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/mult_by_3.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_implementation.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/aes_encryption_implementation_top.vhd">
-        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_implementation.vhd"/>
+          <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="aes_encryption_implementation_top"/>
+        <Option Name="TopModule" Val="aes_encryption_implementation"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

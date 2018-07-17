@@ -10,22 +10,24 @@
 
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use work.aes_encryption_lib.all;
+use IEEE.STD_LOGIC_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.aes_encryption_lib.all;
+
 entity aes_encryption_sbox is
-    Port ( 
-        i_byte              : in Byte;
-        o_byte              : out Byte                  
+  port (
+    i_byte : in  std_logic_vector(7 downto 0);
+    o_byte : out std_logic_vector(7 downto 0)
     );
 end aes_encryption_sbox;
 
 architecture Behavioral of aes_encryption_sbox is
 
-    type ByteArray is array(0 to 15,0 to 15) of Byte;
+  type ByteArray is array(0 to 15, 0 to 15) of std_logic_vector(7 downto 0);
 
-    constant sbox : ByteArray := (
+  constant sbox : ByteArray := (
     (x"63", x"7C", x"77", x"7B", x"F2", x"6B", x"6F", x"C5", x"30", x"01", x"67", x"2B", x"FE", x"D7", x"AB", x"76"),
     (x"CA", x"82", x"C9", x"7D", x"FA", x"59", x"47", x"F0", x"AD", x"D4", x"A2", x"AF", x"9C", x"A4", x"72", x"C0"),
     (x"B7", x"FD", x"93", x"26", x"36", x"3F", x"F7", x"CC", x"34", x"A5", x"E5", x"F1", x"71", x"D8", x"31", x"15"),
@@ -45,7 +47,8 @@ architecture Behavioral of aes_encryption_sbox is
     );
 
 begin
-    
-    o_byte <= sbox(to_integer(unsigned(i_byte(7 downto 4))),to_integer(unsigned(i_byte(3 downto 0))));
+
+  o_byte <= sbox(to_integer(unsigned(i_byte(7 downto 4))),
+                 to_integer(unsigned(i_byte(3 downto 0))));
 
 end Behavioral;
