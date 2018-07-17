@@ -265,3 +265,330 @@ selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ac
 collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 8); // B (D, ch)
 // Elapsed time: 724 seconds
 selectCodeEditor("aes_encryption_implementation.vhd", 374, 180); // cd (w, ch)
+// Elapsed time: 61 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 524, 311); // cd (w, ch)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (O, ch) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (ch): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bv (ch):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A (ch)
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7z020clg400-1 Top: aes_encryption_implementation 
+// HMemoryUtils.trashcanNow. Engine heap size: 694 MB. GUI used memory: 57 MB. Current time: 7/17/18 8:49:48 PM AEST
+// [Engine Memory]: 723 MB (+79329kb) [00:19:19]
+// [Engine Memory]: 911 MB (+159479kb) [00:19:24]
+// TclEventType: ELABORATE_FINISH
+// HMemoryUtils.trashcanNow. Engine heap size: 998 MB. GUI used memory: 57 MB. Current time: 7/17/18 8:50:03 PM AEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// [Engine Memory]: 1,094 MB (+144321kb) [00:19:34]
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,094 MB. GUI used memory: 57 MB. Current time: 7/17/18 8:50:05 PM AEST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 1,181 MB (+33225kb) [00:19:35]
+// Schematic: addNotify
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 892.898 ; gain = 107.055 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 953.410 ; gain = 167.566 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 953.410 ; gain = 167.566 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 953.410 ; gain = 167.566 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/constrs_1/new/aes_encryption_implementation.xdc] Finished Parsing XDC File [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/constrs_1/new/aes_encryption_implementation.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1326.902 ; gain = 541.059 
+// Tcl Message: 28 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1326.902 ; gain = 541.059 
+// 'dO' command handler elapsed time: 23 seconds
+// Elapsed time: 22 seconds
+dismissDialog("Open Elaborated Design"); // bv (ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,217 MB. GUI used memory: 86 MB. Current time: 7/17/18 8:50:33 PM AEST
+// [GUI Memory]: 117 MB (+399kb) [00:29:55]
+// [GUI Memory]: 124 MB (+1065kb) [00:34:31]
+// [GUI Memory]: 131 MB (+371kb) [00:46:17]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,220 MB. GUI used memory: 86 MB. Current time: 7/17/18 9:20:34 PM AEST
+// Elapsed time: 2223 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+// Elapsed time: 10 seconds
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2, false, true); // k (j, ch) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ch)
+// Elapsed time: 22 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 316, 65); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 316, 65, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 324, 137); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 324, 137, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 321, 183); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 321, 183, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 331, 156); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 331, 156, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 297, 269); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 297, 269, false, false, false, false, true); // cd (w, ch) - Double Click
+// [GUI Memory]: 138 MB (+208kb) [00:57:32]
+// Elapsed time: 10 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 262, 344); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 242, 397); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 241, 397, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 257, 391); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 257, 391, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 277, 382); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 277, 382, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 369, 407); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 369, 407, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 537, 400); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 537, 400, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 352, 385); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 308, 397); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 308, 397, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 269, 396); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 267, 396, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 83, 161); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 81, 160, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 239, 285); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 222, 177); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 222, 177, false, false, false, false, true); // cd (w, ch) - Double Click
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_encryption_implementation(Behavioral) (aes_encryption_implementation.vhd), aes_other_round : aes_encryption_round(Behavioral) (aes_encryption_rounds.vhd)]", 4, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_encryption_implementation(Behavioral) (aes_encryption_implementation.vhd), aes_first_round : aes_encryption_key_addition(Behavioral) (aes_encryption_key_addition.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_encryption_implementation(Behavioral) (aes_encryption_implementation.vhd), aes_first_round : aes_encryption_key_addition(Behavioral) (aes_encryption_key_addition.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 78 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_key_addition.vhd", 3); // k (j, ch)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+// Elapsed time: 11 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 382, 248); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 379, 259); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 378, 259, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 78, 360); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 132, 341); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 160, 352); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("aes_encryption_implementation.vhd", 51, 76); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 51, 76, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 51, 76, false, false, false, true, false); // cd (w, ch) - Popup Trigger
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // U (ai, ch)
+selectMenu(RDIResource.HCodeEditor_DIFF_WITH, "Diff with"); // U (ai, ch)
+selectMenu(RDIResource.HCodeEditor_BLANK_OPERATIONS, "Blank Operations"); // U (ai, ch)
+selectMenuItem(PAResourceOtoP.PACodeEditor_FIND_USAGES, "Find Usages..."); // ac (ai, ch)
+// a (ch): Find Usages: addNotify
+selectButton(RDIResource.BaseDialog_OK, "Find"); // a (a)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,223 MB. GUI used memory: 87 MB. Current time: 7/17/18 9:32:01 PM AEST
+dismissDialog("Find Usages"); // a (ch)
+selectTree(PAResourceEtoH.FindInFilesView_ROOT, "[ROOT, [651, 656]]", 1, false); // W (O, ch)
+selectTree(PAResourceEtoH.FindInFilesView_ROOT, "[ROOT, [651, 656]]", 1, false); // W (O, ch)
+selectTree(PAResourceEtoH.FindInFilesView_ROOT, "[ROOT, [651, 656]]", 1, false, false, false, false, false, true); // W (O, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 149, 79); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 128, 80); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 128, 80, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 137, 74); // cd (w, ch)
+selectCodeEditor("aes_encryption_implementation.vhd", 137, 74, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_implementation.vhd", 137, 74, false, false, false, true, false); // cd (w, ch) - Popup Trigger
+selectMenuItem(PAResourceOtoP.PACodeEditor_GOTO_DEFINITION, "Go to Definition"); // ac (ai, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2, false, true); // k (j, ch) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_lib.vhd", 4); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2); // k (j, ch)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_implementation.vhd", 2, false, true); // k (j, ch) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_lib.vhd", 4); // k (j, ch)
+// Elapsed time: 49 seconds
+selectCodeEditor("aes_encryption_lib.vhd", 520, 371); // cd (w, ch)
+// Elapsed time: 113 seconds
+selectCodeEditor("aes_encryption_lib.vhd", 363, 315); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 363, 315, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_lib.vhd", 251, 311); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 251, 311, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 46 seconds
+selectCodeEditor("aes_encryption_lib.vhd", 73, 366); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 73, 366, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("aes_encryption_lib.vhd", 96, 368); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 96, 368, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_lib.vhd", 96, 368, false, false, false, true, false); // cd (w, ch) - Popup Trigger
+selectMenuItem(PAResourceOtoP.PACodeEditor_FIND_USAGES, "Find Usages..."); // ac (ai, Popup.HeavyWeightWindow)
+// a (ch): Find Usages: addNotify
+selectButton(RDIResource.BaseDialog_OK, "Find"); // a (a)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,227 MB. GUI used memory: 89 MB. Current time: 7/17/18 9:36:09 PM AEST
+dismissDialog("Find Usages"); // a (ch)
+selectTree(PAResourceEtoH.FindInFilesView_ROOT, "[ROOT, [785, 795]]", 1, false); // W (O, ch)
+expandTree(PAResourceEtoH.FindInFilesView_ROOT, "[ROOT]", 3); // W (O, ch)
+selectTree(PAResourceEtoH.FindInFilesView_ROOT, "[ROOT, [935, 945]]", 4, false); // W (O, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 163, 418); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 163, 418, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_lib.vhd", 92, 369); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 92, 369, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_lib.vhd", 171, 432); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 171, 432, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_lib.vhd", 176, 424); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 176, 424, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_lib.vhd", 153, 416); // cd (w, ch)
+selectCodeEditor("aes_encryption_lib.vhd", 153, 416, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("aes_encryption_lib.vhd", 279, 403); // cd (w, ch)
+// Elapsed time: 27 seconds
+selectCodeEditor("aes_encryption_lib.vhd", 238, 393); // cd (w, ch)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectButton(RDIResource.AbstractSearchablePanel_SHOW_SEARCH, "Sources_search"); // u (f, ch): TRUE
+setText("PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE_SEARCH_FIELD", "sbox"); // OverlayTextField (C, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_encryption_implementation(Behavioral) (aes_encryption_implementation.vhd), key_schedule_1 : aes_encryption_key_schedule(Behavioral) (aes_encryption_key_schedule.vhd), round_key_gen[4].leftmost_sub_key_gen.g_func_inst : g_function(Behavioral) (g_function.vhd), s_box_sub_0[1].s_box_inst : aes_encryption_sbox(Behavioral) (aes_encryption_sbox.vhd)]", 5, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_encryption_implementation(Behavioral) (aes_encryption_implementation.vhd), key_schedule_1 : aes_encryption_key_schedule(Behavioral) (aes_encryption_key_schedule.vhd), round_key_gen[4].leftmost_sub_key_gen.g_func_inst : g_function(Behavioral) (g_function.vhd), s_box_sub_0[0].s_box_inst : aes_encryption_sbox(Behavioral) (aes_encryption_sbox.vhd)]", 4, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, aes_encryption_implementation(Behavioral) (aes_encryption_implementation.vhd), key_schedule_1 : aes_encryption_key_schedule(Behavioral) (aes_encryption_key_schedule.vhd), round_key_gen[4].leftmost_sub_key_gen.g_func_inst : g_function(Behavioral) (g_function.vhd), s_box_sub_0[0].s_box_inst : aes_encryption_sbox(Behavioral) (aes_encryption_sbox.vhd)]", 4, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("aes_encryption_sbox.vhd", 297, 201); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_sbox.vhd", 5); // k (j, ch)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "aes_encryption_sbox.vhd", 5, false, true); // k (j, ch) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // G (Q, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 84, 217); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 84, 217, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_sbox.vhd", 92, 56); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 92, 56, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_sbox.vhd", 69, 269); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 69, 269, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 176, 311); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 171, 299); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 171, 299, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 161, 270); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_sbox.vhd", 78, 106); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 62, 110); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 62, 110, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_sbox.vhd", 89, 112); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'v'); // cd (w, ch)
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("aes_encryption_sbox.vhd", 691, 183); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("aes_encryption_sbox.vhd", 458, 294); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 458, 294, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("aes_encryption_sbox.vhd", 458, 294); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 458, 294); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "aes_encryption_sbox.vhd", 'c'); // cd (w, ch)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 63 seconds
+selectCodeEditor("aes_encryption_sbox.vhd", 427, 147); // cd (w, ch)
+selectCodeEditor("aes_encryption_sbox.vhd", 396, 202); // cd (w, ch)
+selectButton(PAResourceQtoS.StaleMoreAction_OUT_OF_DATE_DETAILS, "details"); // h (cM, ch)
+// Elaborated Design is out-of-date Due to: show
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (cM, ch)
+// bv (ch):  Reloading : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: refresh_design 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1339.273 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1384.879 ; gain = 45.605 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message:  Report Check Netlist:  +------+------------------+-------+---------+-------+------------------+ |      |Item              |Errors |Warnings |Status |Description       | +------+------------------+-------+---------+-------+------------------+ |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets | +------+------------------+-------+---------+-------+------------------+ --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1384.879 ; gain = 45.605 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1384.879 ; gain = 45.605 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// [Engine Memory]: 1,272 MB (+34248kb) [01:09:11]
+// Engine heap size: 1,272 MB. GUI used memory: 68 MB. Current time: 7/17/18 9:39:43 PM AEST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,272 MB. GUI used memory: 68 MB. Current time: 7/17/18 9:39:43 PM AEST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,272 MB. GUI used memory: 62 MB. Current time: 7/17/18 9:39:45 PM AEST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Schematic: addNotify
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/constrs_1/new/aes_encryption_implementation.xdc] Finished Parsing XDC File [D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/constrs_1/new/aes_encryption_implementation.xdc] Completed Processing XDC Constraints  
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1384.879 ; gain = 45.605 
+// Elapsed time: 10 seconds
+dismissDialog("Reloading"); // bv (ch)
