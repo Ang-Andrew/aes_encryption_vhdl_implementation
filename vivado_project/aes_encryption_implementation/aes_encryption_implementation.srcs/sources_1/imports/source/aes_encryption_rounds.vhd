@@ -48,6 +48,7 @@ begin
 
   shiftRows_process : entity work.aes_encryption_ShiftRows
     port map(
+      clock        => clock,
       input_state  => s_box_out,
       output_state => shiftRows_out
       );

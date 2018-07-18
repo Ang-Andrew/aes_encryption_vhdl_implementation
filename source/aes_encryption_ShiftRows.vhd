@@ -20,6 +20,7 @@ use work.aes_encryption_lib.all;
 
 entity aes_encryption_ShiftRows is
   port (
+    clock        : in std_logic;
     input_state  : in  State;
     output_state : out State
     );
@@ -28,11 +29,16 @@ end aes_encryption_ShiftRows;
 architecture Behavioral of aes_encryption_ShiftRows is
 
 begin
-
-  output_state <= ((input_state(0)(0), input_state(1)(1), input_state(2)(2), input_state(3)(3)),
-                   (input_state(1)(0), input_state(2)(1), input_state(3)(2), input_state(0)(3)),
-                   (input_state(2)(0), input_state(3)(1), input_state(0)(2), input_state(1)(3)),
-                   (input_state(3)(0), input_state(0)(1), input_state(1)(2), input_state(2)(3)));
+  
+  process(clock)
+  begin
+      if rising_edge(clock) then
+          output_state <= ((input_state(0)(0), input_state(1)(1), input_state(2)(2), input_state(3)(3)),
+                           (input_state(1)(0), input_state(2)(1), input_state(3)(2), input_state(0)(3)),
+                           (input_state(2)(0), input_state(3)(1), input_state(0)(2), input_state(1)(3)),
+                           (input_state(3)(0), input_state(0)(1), input_state(1)(2), input_state(2)(3)));
+      end if;
+  end process;
 
 
 end Behavioral;
