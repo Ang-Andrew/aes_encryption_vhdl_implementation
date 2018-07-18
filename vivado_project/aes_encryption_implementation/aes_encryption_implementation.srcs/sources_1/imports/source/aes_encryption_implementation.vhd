@@ -59,6 +59,7 @@ begin
 
   aes_other_round : entity work.aes_encryption_round
     port map(
+      clock   => clock,
       i_state => current_state,
       i_key   => current_key,
       o_state => output_state

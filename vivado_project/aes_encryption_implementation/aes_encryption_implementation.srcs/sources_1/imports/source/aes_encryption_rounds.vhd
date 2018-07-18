@@ -17,6 +17,7 @@ use work.aes_encryption_lib.all;
 
 entity aes_encryption_round is
   port (
+    clock   : in  std_logic;       
     i_state : in  State;
     i_key   : in  Key;
     o_state : out State
@@ -28,6 +29,9 @@ architecture Behavioral of aes_encryption_round is
   signal s_box_out      : State;
   signal shiftRows_out  : State;
   signal mixColumns_out : State;
+  signal state_reg      : State;
+  signal key_reg        : Key;
+  signal o_state_reg    : State;        
 
 begin
 
@@ -35,7 +39,8 @@ begin
     subBytes : for j in 0 to 3 generate
       s_box_inst : entity work.aes_encryption_sbox
         port map(
-          i_byte => i_state(i)(j),
+          clock  => clock,
+          i_byte => state_reg(i)(j),
           o_byte => s_box_out(i)(j)
           );
     end generate;
@@ -55,9 +60,19 @@ begin
 
   addRoundKey_process : entity work.aes_encryption_key_addition
     port map(
+      clock   => clock,
       i_state => mixColumns_out,
-      i_key   => i_key,
+      i_key   => key_reg,
       o_state => o_state
       );
+      
+  process(clock)
+  begin
+    if rising_edge(clock) then
+        state_reg <= i_state;
+        key_reg   <= i_key;
+        o_state   <= o_state_reg;
+    end if;    
+  end process;
 
 end Behavioral;
