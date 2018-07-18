@@ -246,3 +246,5 @@ Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memor
 RTL Elaboration failed
 ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
 close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 17 22:52:56 2018...

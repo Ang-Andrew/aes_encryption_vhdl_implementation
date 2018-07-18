@@ -18,13 +18,15 @@ use work.aes_encryption_lib.all;
 
 entity aes_encryption_key_schedule is
   port (
+    clock          : in std_logic;
     i_key          : in  Key;
     o_key_schedule : out Key_schedule
     );
 end aes_encryption_key_schedule;
 
 architecture Behavioral of aes_encryption_key_schedule is
-
+  
+  signal key_reg       : Key;
   signal temp_key_schedule  : Key_schedule;
   signal g_func_schedule    : Key_schedule;
   signal key_schedule_mod_4 : Key_schedule;
@@ -33,7 +35,7 @@ begin
 
   round_key_gen : for i in 0 to 43 generate
     round_key_0_gen : for i in 0 to 3 generate
-      temp_key_schedule(i) <= i_key(i);
+      temp_key_schedule(i) <= key_reg(i);
     end generate;
 
     leftmost_sub_key_gen : if (i mod 4 = 0 and i > 3) generate
@@ -53,7 +55,14 @@ begin
                                temp_key_schedule(i-1)(3) xor temp_key_schedule(i-4)(3));
     end generate;
   end generate;
-
-  o_key_schedule <= temp_key_schedule;
+  
+  process(clock)
+  begin
+    if rising_edge(clock) then
+        key_reg <= i_key;
+        o_key_schedule <= temp_key_schedule;
+    end if;
+  end process;
+  
 
 end Behavioral;
