@@ -44,6 +44,7 @@ begin
 
   key_schedule_1 : entity work.aes_encryption_key_schedule
     port map(
+      clock          => clock,
       i_key          => i_key,
       o_key_schedule => key_schedule
       );
