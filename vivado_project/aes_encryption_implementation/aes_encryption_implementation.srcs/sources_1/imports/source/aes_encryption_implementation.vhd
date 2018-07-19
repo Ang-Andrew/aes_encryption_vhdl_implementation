@@ -67,6 +67,7 @@ begin
 
   aes_last_round_1 : entity work.aes_encryption_last_round
     port map(
+      clock   => clock,
       i_state => final_state_input,
       i_key   => current_key,
       o_state => o_state
