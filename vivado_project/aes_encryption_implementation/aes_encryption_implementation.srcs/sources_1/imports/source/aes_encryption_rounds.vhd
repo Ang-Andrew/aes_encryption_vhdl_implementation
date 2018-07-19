@@ -55,6 +55,7 @@ begin
 
   mixColumns_process : entity work.aes_encryption_mixColumns
     port map(
+      clock   => clock,
       i_state => shiftRows_out,
       o_state => mixColumns_out
       );

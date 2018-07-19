@@ -40,7 +40,7 @@ begin
 
   words_mult_by_2 : for i in 0 to 3 generate
     bytes_mult_by_2 : for j in 0 to 3 generate
-      o_state_reg(i)(j) <= (i_state_reg(i)(j)(6 downto 0) & '0') xor x"1b" when i_stati_state_reg(j)(7) = '1'
+      o_state_reg(i)(j) <= (i_state_reg(i)(j)(6 downto 0) & '0') xor x"1b" when i_state_reg(i)(j)(7) = '1'
                        else i_state_reg(i)(j)(6 downto 0) & '0';
     end generate;
   end generate;
