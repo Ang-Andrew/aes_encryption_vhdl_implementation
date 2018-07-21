@@ -16,7 +16,6 @@ use work.aes_encryption_lib.all;
 
 entity g_function is
   port (
-    clock      : in std_logic;
     i_rcon_sel : in  integer;
     i_word     : in  Word;
     i_word2    : in  Word;
@@ -41,7 +40,6 @@ begin
   s_box_sub_0 : for i in 0 to 3 generate
     s_box_inst : entity work.aes_encryption_sbox
       port map(
-        clock  => clock,
         i_byte => temp_word(i),
         o_byte => sub_temp_word(i)
         );
@@ -50,17 +48,17 @@ begin
   rcon_addition : rcon_temp_word <= (sub_temp_word(0) xor Rcon(i_rcon_sel),
                                      sub_temp_word(1), sub_temp_word(2), sub_temp_word(3));
 
-  word2_addition : o_word_reg <= (rcon_temp_word(0) xor word2_reg(0), rcon_temp_word(1) xor word2_reg(1),
-                              rcon_temp_word(2) xor word2_reg(2), rcon_temp_word(3) xor word2_reg(3));
+  word2_addition : o_word <= (rcon_temp_word(0) xor i_word2(0), rcon_temp_word(1) xor i_word2(1),
+                              rcon_temp_word(2) xor i_word2(2), rcon_temp_word(3) xor i_word2(3));
                               
-  process(clock)
-  begin
-    if rising_edge(clock) then
-        -- rcon_sel_reg <= i_rcon_sel;
-        word_reg     <= i_word;
-        word2_reg    <= i_word2;
-        o_word       <= o_word_reg;
-    end if;
-  end process;
+--  process(clock)
+--  begin
+--    if rising_edge(clock) then
+--        -- rcon_sel_reg <= i_rcon_sel;
+--        word_reg     <= i_word;
+--        word2_reg    <= i_word2;
+--        o_word       <= o_word_reg;
+--    end if;
+--  end process;
 
 end Behavioral;

@@ -24,7 +24,6 @@ use work.aes_encryption_lib.all;
 
 entity mult_by_2 is
   port (
-    clock   : in  std_logic;
     i_state : in  State;
     o_state : out State
     );
@@ -32,25 +31,13 @@ end mult_by_2;
 
 architecture Behavioral of mult_by_2 is
     
-    signal o_state_reg : State;
-    signal i_state_reg : State;
-    
-    
 begin
 
   words_mult_by_2 : for i in 0 to 3 generate
     bytes_mult_by_2 : for j in 0 to 3 generate
-      o_state_reg(i)(j) <= (i_state_reg(i)(j)(6 downto 0) & '0') xor x"1b" when i_state_reg(i)(j)(7) = '1'
-                       else i_state_reg(i)(j)(6 downto 0) & '0';
+      o_state(i)(j) <= (i_state(i)(j)(6 downto 0) & '0') xor x"1b" when i_state(i)(j)(7) = '1'
+                       else i_state(i)(j)(6 downto 0) & '0';
     end generate;
   end generate;
-  
-  process(clock)
-  begin
-    if rising_edge(clock) then
-        o_state <= o_state_reg;
-        i_state_reg <= i_state;
-    end if;
-  end process;
 
 end Behavioral;

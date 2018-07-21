@@ -18,7 +18,6 @@ use work.aes_encryption_lib.all;
 
 entity aes_encryption_sbox is
   port (
-    clock  : in std_logic;
     i_byte : in  std_logic_vector(7 downto 0);
     o_byte : out std_logic_vector(7 downto 0)
     );
@@ -49,12 +48,7 @@ architecture Behavioral of aes_encryption_sbox is
 
 begin
   
-  process(clock)
-  begin
-    if rising_edge(clock) then
-        o_byte <= sbox(to_integer(unsigned(i_byte(7 downto 4))),
-                        to_integer(unsigned(i_byte(3 downto 0))));
-    end if;
-  end process;
+    o_byte <= sbox(to_integer(unsigned(i_byte(7 downto 4))),
+                            to_integer(unsigned(i_byte(3 downto 0))));
 
 end Behavioral;
