@@ -47,7 +47,7 @@ begin
         );
   end generate;
 
-  rcon_addition : rcon_temp_word <= (sub_temp_word(0) xor Rcon(rcon_sel_reg),
+  rcon_addition : rcon_temp_word <= (sub_temp_word(0) xor Rcon(i_rcon_sel),
                                      sub_temp_word(1), sub_temp_word(2), sub_temp_word(3));
 
   word2_addition : o_word_reg <= (rcon_temp_word(0) xor word2_reg(0), rcon_temp_word(1) xor word2_reg(1),
@@ -56,7 +56,7 @@ begin
   process(clock)
   begin
     if rising_edge(clock) then
-        rcon_sel_reg <= i_rcon_sel;
+        -- rcon_sel_reg <= i_rcon_sel;
         word_reg     <= i_word;
         word2_reg    <= i_word2;
         o_word       <= o_word_reg;

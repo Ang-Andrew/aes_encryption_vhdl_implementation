@@ -18,6 +18,7 @@ architecture Behavioral of aes_encyrption_mixColumns_tb is
     
     component aes_encryption_mixColumns is
         Port ( 
+                clock                       : in std_logic;
                 i_state                     : in State;
                 o_state                     : out State
         );
@@ -26,10 +27,13 @@ architecture Behavioral of aes_encyrption_mixColumns_tb is
     
     signal tb_input_state                         : State;
     signal tb_output_state                        : State;
+    signal tb_clock                             : std_logic;
+    constant clk_period                         : time := 10 ns;
     
 begin
 
     uut: aes_encryption_mixColumns port map(
+        clock   => tb_clock,    
         i_state => tb_input_state,
         o_state => tb_output_state 
     );
@@ -38,6 +42,14 @@ begin
          begin
             tb_input_state <= ((x"d4",x"bf",x"5d",x"30"),(x"e0",x"b4",x"52",x"ae"),(x"b8",x"41",x"11",x"f1"),(x"1e",x"27",x"98",x"e5")); 
             wait;        
+    end process;
+    
+    clk_process :process
+    begin
+         tb_clock <= '0';
+         wait for clk_period/2;
+         tb_clock <= '1';
+         wait for clk_period/2;
     end process;
 
 end Behavioral;

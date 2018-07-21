@@ -1,9 +1,9 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"../../../../aes_encryption_implementation.srcs/sources_1/new/aes_encryption_lib.vhd" \
-"../../../../aes_encryption_implementation.srcs/sources_1/new/aes_encryption_mixColumns.vhd" \
-"../../../../aes_encryption_implementation.srcs/sources_1/new/mult_by_2.vhd" \
-"../../../../aes_encryption_implementation.srcs/sources_1/new/mult_by_3.vhd" \
+"../../../../aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_lib.vhd" \
+"../../../../aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_mixColumns.vhd" \
+"../../../../aes_encryption_implementation.srcs/sources_1/imports/source/mult_by_2.vhd" \
+"../../../../aes_encryption_implementation.srcs/sources_1/imports/source/mult_by_3.vhd" \
 "../../../../aes_encryption_implementation.srcs/sim_1/new/aes_encyrption_mixColumns_tb.vhd" \
 
 # Do not sort compile order

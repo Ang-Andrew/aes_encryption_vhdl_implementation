@@ -26,7 +26,8 @@ end aes_encryption_mixColumns;
 architecture Behavioral of aes_encryption_mixColumns is
     
     component mult_by_2 is
-        Port ( 
+        Port (
+            clock                   : in std_logic; 
             i_state                 : in State;
             o_state                 : out State
         );
@@ -34,6 +35,7 @@ architecture Behavioral of aes_encryption_mixColumns is
     
     component mult_by_3 is
         Port ( 
+            clock                   : in std_logic;
             i_state                 : in State;
             o_state                 : out State
         );
@@ -47,11 +49,13 @@ architecture Behavioral of aes_encryption_mixColumns is
 begin
 
     mult_by_2_1: mult_by_2 port map(
+        clock   => clock,    
         i_state => i_state_reg,
         o_state => state_mult_2
     );
     
     mult_by_3_1: mult_by_3 port map(
+        clock   => clock,
         i_state => i_state_reg,
         o_state => state_mult_3
     );
