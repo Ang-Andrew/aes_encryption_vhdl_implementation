@@ -39,7 +39,6 @@ begin
     subBytes : for j in 0 to 3 generate
       s_box_inst : entity work.aes_encryption_sbox
         port map(
-          clock  => clock,
           i_byte => i_state_reg(i)(j),
           o_byte => s_box_out(i)(j)
           );
@@ -48,7 +47,6 @@ begin
 
   shiftRows_process : entity work.aes_encryption_ShiftRows
     port map(
-      clock        => clock,
       input_state  => s_box_out,
       output_state => shiftRows_out
       );

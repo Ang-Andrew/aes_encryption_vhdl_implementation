@@ -97,17 +97,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_key_addition.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_mixColumns.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_key_addition.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_mixColumns.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_mixColumns.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_key_addition.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_mixColumns.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_key_addition.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
