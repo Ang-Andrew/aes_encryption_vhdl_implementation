@@ -16,7 +16,7 @@ library work;
 use work.aes_encryption_lib.all;
 
 entity aes_encryption_mixColumns is
-    Port ( 
+    Port (
             i_state                     : in State;
             o_state                     : out State
     );
@@ -39,7 +39,9 @@ architecture Behavioral of aes_encryption_mixColumns is
     end component mult_by_3;
     
     signal state_mult_2             : State;
-    signal state_mult_3             : State;                 
+    signal state_mult_3             : State;     
+--    signal i_state_reg              : State;
+--    signal o_state_reg              : State;            
 
 begin
 
@@ -60,5 +62,13 @@ begin
                        state_mult_2(i)(2) xor state_mult_3(i)(3) xor i_state(i)(0) xor i_state(i)(1),
                        state_mult_2(i)(3) xor state_mult_3(i)(0) xor i_state(i)(1) xor i_state(i)(2));
     end generate;
+    
+--    process(clock)
+--    begin
+--        if rising_edge(clock) then
+--            i_state_reg <= i_state;
+--            o_state     <= o_state_reg;
+--        end if;
+--    end process;
     
 end Behavioral;

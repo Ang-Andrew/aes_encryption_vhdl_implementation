@@ -49,14 +49,23 @@ begin
       o_key_schedule => key_schedule
       );
 
-    aes_first_round : entity work.aes_encryption_key_addition
-    port map(
-      clock   => clock,  
-      i_state => i_state,
-      i_key   => i_key,
-      o_state => first_output_state
-      );
-
+--    aes_first_round : entity work.aes_encryption_key_addition
+--    port map(
+--      clock   => clock,  
+--      i_state => i_state,
+--      i_key   => i_key,
+--      o_state => first_output_state
+--      );
+  
+    aes_first_round_key_addition:
+        for i in 0 to 3 generate
+        first_output_state(i) <= (i_state(i)(0) xor i_state(i)(0),
+                                   i_state(i)(1) xor i_state(i)(1),
+                                   i_state(i)(2) xor i_state(i)(2),
+                                   i_state(i)(3) xor i_state(i)(3));
+    end generate;
+  
+  
   aes_other_round : entity work.aes_encryption_round
     port map(
       clock   => clock,
