@@ -32,13 +32,14 @@ architecture Behavioral of aes_encryption_implementation is
   type round_num is (round0, round1, round2, round3, round4,
                      round5, round6, round7, round8, round9, round10);
 
-  signal current_round           : round_num;
-  signal current_state           : State;
-  signal current_key             : Key;
-  signal first_output_state      : State;
-  signal output_state            : State;
-  signal final_state_input       : State;
-  signal final_round_input_state : State;
+  signal current_round              : round_num;
+  signal current_state              : State;
+  signal current_key                : Key;
+  signal first_output_state         : State;
+  signal output_state               : State;
+  signal o_state_reg                : State;                    
+  signal final_state_input          : State;
+  signal final_round_input_state    : State;
 
 begin
 
@@ -79,7 +80,7 @@ begin
       clock   => clock,
       i_state => final_state_input,
       i_key   => current_key,
-      o_state => o_state
+      o_state => o_state_reg
       );
 
   process(clock, reset)
@@ -130,11 +131,13 @@ begin
               current_round     <= round10;
               final_state_input <= output_state;
               current_key       <= (key_schedule(40), key_schedule(41), key_schedule(42), key_schedule(43));
-              o_valid           <= '1';
             when round10 =>
-              current_round <= round10;
-              current_state <= final_state_input;
-              current_key   <= (key_schedule(40), key_schedule(41), key_schedule(42), key_schedule(43));
+--              current_round <= round10;
+--              current_state <= final_state_input;
+--              current_key   <= (key_schedule(40), key_schedule(41), key_schedule(42), key_schedule(43));
+--              o_state       <= o_state_reg;
+                o_valid           <= '1';
+                o_state         <= o_state_reg;             
             when others =>
               current_round <= round0;
             end case;
