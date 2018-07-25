@@ -26,11 +26,13 @@ end aes_encryption_last_round;
 architecture Behavioral of aes_encryption_last_round is
 
   signal s_box_out      : State;
+  signal s_box_out_reg  : State;
   signal shiftRows_out  : State;
   signal mixColumns_out : State;
   
   signal i_state_reg    : State;
   signal i_key_reg      : Key;
+  signal i_key_reg_2    : Key;
   signal o_state_reg    : State;
 
 begin
@@ -47,7 +49,7 @@ begin
 
   shiftRows_process : entity work.aes_encryption_ShiftRows
     port map(
-      input_state  => s_box_out,
+      input_state  => s_box_out_reg,
       output_state => shiftRows_out
       );
 
@@ -55,16 +57,18 @@ begin
     port map(
       clock   => clock,
       i_state => shiftRows_out,
-      i_key   => i_key_reg,
+      i_key   => i_key_reg_2,
       o_state => o_state_reg
       );
    
    process(clock)
    begin
     if rising_edge(clock) then
-        i_state_reg <= i_state;
-        i_key_reg   <= i_key;
-        o_state     <= o_state_reg;
+        s_box_out_reg       <= s_box_out; 
+        i_state_reg         <= i_state;
+        i_key_reg           <= i_key;
+        i_key_reg_2         <= i_key_reg;
+        o_state             <= o_state_reg;
     end if;
    end process; 
     
