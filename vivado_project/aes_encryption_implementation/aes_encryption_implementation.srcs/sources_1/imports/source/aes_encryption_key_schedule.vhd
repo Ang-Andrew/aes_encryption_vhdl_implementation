@@ -41,6 +41,7 @@ begin
     leftmost_sub_key_gen : if (i mod 4 = 0 and i > 3) generate
       g_func_inst : entity work.g_function
         port map(
+          clock      => clock,
           i_rcon_sel => (i/4)-1,
           i_word     => temp_key_schedule(i-1),
           i_word2    => temp_key_schedule(i-4),
