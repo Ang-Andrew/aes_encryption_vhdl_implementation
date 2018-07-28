@@ -65,8 +65,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_ShiftRows.vhd">
+      <File Path="$PSRCDIR/sources_1/new/bitwise_xor_word.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_ShiftRows.vhd">
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_ShiftRows.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,7 +80,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_sbox.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_sbox.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -82,7 +88,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/g_function.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/g_function.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -90,7 +96,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_key_schedule.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_key_schedule.vhd"/>
           <Attr Name="ImportTime" Val="1531745366"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -98,7 +104,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_mixColumns.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_mixColumns.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,7 +112,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_key_addition.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_key_addition.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -114,7 +120,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_rounds.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_rounds.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -122,7 +128,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_last_round.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_last_round.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -130,7 +136,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/mult_by_2.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/mult_by_2.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -138,7 +144,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/mult_by_3.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/mult_by_3.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -146,7 +152,7 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_implementation.vhd">
-        <FileInfo>
+        <FileInfo SFType="VHDL2008">
           <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_implementation.vhd"/>
           <Attr Name="ImportTime" Val="1531740019"/>
           <Attr Name="UsedIn" Val="synthesis"/>

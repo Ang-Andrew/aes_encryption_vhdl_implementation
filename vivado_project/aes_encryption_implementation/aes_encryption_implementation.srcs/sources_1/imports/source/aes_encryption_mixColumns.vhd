@@ -45,7 +45,7 @@ architecture Behavioral of aes_encryption_mixColumns is
     signal i_state_reg_2            : State;
     signal o_state_reg              : State;
     signal mult_2_out_reg               : State;
-    signal mult_3_out_reg               : State;            
+    signal mult_3_out_reg               : State;         
 
 begin
 
@@ -72,7 +72,7 @@ begin
         if rising_edge(clock) then
             i_state_reg                 <= i_state;
             i_state_reg_2               <= i_state_reg;
-            o_state                     <= o_state_reg;
+            --o_state                     <= o_state_reg;
             mult_2_out_reg                  <= state_mult_2;
             mult_3_out_reg                  <= state_mult_3;
         end if;

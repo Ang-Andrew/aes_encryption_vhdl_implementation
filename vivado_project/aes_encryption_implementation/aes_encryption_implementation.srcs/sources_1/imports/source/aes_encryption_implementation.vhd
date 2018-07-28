@@ -40,31 +40,35 @@ architecture Behavioral of aes_encryption_implementation is
   signal o_state_reg                : State;                    
   signal final_state_input          : State;
   signal final_round_input_state    : State;
+  signal output_key                 : Key;
+  signal current_round_num          : integer range 1 to 10 := 1;
+  signal key_schedule_input         : Key;
+  
+  signal s0_reg_1                   : State;
+  signal s0_reg_2                   : State;
+  signal s0_reg_3                   : State;
+  signal s0_reg_4                   : State;
+  signal s0_reg_5                   : State;
+  
+  signal state_counter                 : integer range 0 to 5 := 0;
 
 begin
 
-  key_schedule_1 : entity work.aes_encryption_key_schedule
-    port map(
-      clock          => clock,
-      i_key          => i_key,
-      o_key_schedule => key_schedule
-      );
-
---    aes_first_round : entity work.aes_encryption_key_addition
---    port map(
---      clock   => clock,  
---      i_state => i_state,
---      i_key   => i_key,
---      o_state => first_output_state
---      );
+    key_schedule_1 : entity work.aes_encryption_key_schedule
+        port map(
+          clock          => clock,
+          i_rcon_sel     => current_round_num,
+          i_key          => key_schedule_input,
+          o_key          => output_key
+          );
   
     aes_first_round_key_addition:
         for i in 0 to 3 generate
-        first_output_state(i) <= (i_state(i)(0) xor i_state(i)(0),
-                                   i_state(i)(1) xor i_state(i)(1),
-                                   i_state(i)(2) xor i_state(i)(2),
-                                   i_state(i)(3) xor i_state(i)(3));
-    end generate;
+            first_output_state(i) <= (i_state(i)(0) xor i_key(i)(0),
+                                       i_state(i)(1) xor i_key(i)(1),
+                                       i_state(i)(2) xor i_key(i)(2),
+                                       i_state(i)(3) xor i_key(i)(3));
+        end generate;
   
   
   aes_other_round : entity work.aes_encryption_round
@@ -91,51 +95,122 @@ begin
         else
             case current_round is
             when round0 =>
-              o_valid       <= '0';
-              current_round <= round1;
-              current_state <= first_output_state;
-              current_key   <= (key_schedule(4), key_schedule(5), key_schedule(6), key_schedule(7));
+                if state_counter < 5 then
+                    o_valid         <= '0';
+                    state_counter   <= state_counter + 1;
+                    s0_reg_1        <= first_output_state;
+                    s0_reg_2        <= s0_reg_1;
+                    s0_reg_3        <= s0_reg_2;
+                    s0_reg_4        <= s0_reg_3;
+                    s0_reg_5        <= s0_reg_4;
+                    current_round   <= round0;
+                else
+                    -- state and key calculation should be ready
+                    current_state   <= s0_reg_5;
+                    current_key     <= output_key;
+                    current_round   <= round1;
+                    state_counter   <= 0;
+                end if;      
             when round1 =>
-              current_round <= round2;
-              current_state <= output_state;
-              current_key   <= (key_schedule(8), key_schedule(9), key_schedule(10), key_schedule(11));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round1;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round2;
+                end if;
             when round2 =>
-              current_round <= round3;
-              current_state <= output_state;
-              current_key   <= (key_schedule(12), key_schedule(13), key_schedule(14), key_schedule(15));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round2;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round3;
+                end if;
             when round3 =>
-              current_round <= round4;
-              current_state <= output_state;
-              current_key   <= (key_schedule(16), key_schedule(17), key_schedule(18), key_schedule(19));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round3;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round4;
+                end if;
             when round4 =>
-              current_round <= round5;
-              current_state <= output_state;
-              current_key   <= (key_schedule(20), key_schedule(21), key_schedule(22), key_schedule(23));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round4;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round5;
+                end if;
             when round5 =>
-              current_round <= round6;
-              current_state <= output_state;
-              current_key   <= (key_schedule(24), key_schedule(25), key_schedule(26), key_schedule(27));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round5;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round6;
+                end if;
             when round6 =>
-              current_round <= round7;
-              current_state <= output_state;
-              current_key   <= (key_schedule(28), key_schedule(29), key_schedule(30), key_schedule(31));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round6;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round7;
+                end if;
             when round7 =>
-              current_round <= round8;
-              current_state <= output_state;
-              current_key   <= (key_schedule(32), key_schedule(33), key_schedule(34), key_schedule(35));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round7;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round8;
+                end if;
             when round8 =>
-              current_round <= round9;
-              current_state <= output_state;
-              current_key   <= (key_schedule(36), key_schedule(37), key_schedule(38), key_schedule(39));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round8;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round9;
+                end if;
             when round9 =>
-              current_round     <= round10;
-              final_state_input <= output_state;
-              current_key       <= (key_schedule(40), key_schedule(41), key_schedule(42), key_schedule(43));
+                if state_counter < 5 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round9;
+                else
+                    -- state and key calcaulation are done
+                    current_state   <= output_state;
+                    current_key     <= output_key;
+                    state_counter   <= 0;
+                    current_round   <= round10;
+                end if;
             when round10 =>
---              current_round <= round10;
---              current_state <= final_state_input;
---              current_key   <= (key_schedule(40), key_schedule(41), key_schedule(42), key_schedule(43));
---              o_state       <= o_state_reg;
                 o_valid           <= '1';
                 o_state         <= o_state_reg;             
             when others =>

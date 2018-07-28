@@ -32,8 +32,16 @@ architecture Behavioral of aes_encryption_round is
   signal mixColumns_out         : State;
   signal mixColumns_out_reg     : State;
   signal state_reg              : State;
-  signal key_reg                : Key;
-  signal o_state_reg            : State;        
+  signal o_state_reg            : State;
+  
+  --input key delay before XOR with state
+  
+  signal key_reg_1                : Key;
+  signal key_reg_2                : Key;
+  signal key_reg_3                : Key;
+  signal key_reg_4                : Key;
+  signal key_reg_5                : Key;
+      
 
 begin
 
@@ -64,7 +72,7 @@ begin
     port map(
       clock   => clock,
       i_state => mixColumns_out_reg,
-      i_key   => key_reg,
+      i_key   => key_reg_5,
       o_state => o_state_reg
       );
       
@@ -72,10 +80,18 @@ begin
   begin
     if rising_edge(clock) then
         state_reg           <= i_state;
-        key_reg             <= i_key;
         s_box_out_reg       <= s_box_out;
+        
+        key_reg_1           <= i_key;
+        key_reg_2           <= key_reg_1;
+        key_reg_3           <= key_reg_2;
+        key_reg_4           <= key_reg_3;
+        key_reg_5           <= key_reg_4;
+        
         mixColumns_out_reg  <= mixColumns_out;
         o_state             <= o_state_reg;
+        
+        
     end if;    
   end process;
 
