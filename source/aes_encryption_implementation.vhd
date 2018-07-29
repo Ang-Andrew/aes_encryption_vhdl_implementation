@@ -200,19 +200,20 @@ begin
                     current_round   <= round9;
                 end if;
             when round9 =>
-                if state_counter < 5 then
+                if state_counter < 3 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round9;
                 else
                     -- state and key calcaulation are done
-                    current_state   <= output_state;
-                    current_key     <= output_key;
-                    state_counter   <= 0;
-                    current_round   <= round10;
+                    final_state_input   <= output_state;
+                    current_key         <= output_key;
+                    state_counter       <= 0;
+                    current_round       <= round10;
                 end if;
             when round10 =>
-                o_valid           <= '1';
-                o_state         <= o_state_reg;             
+                o_valid             <= '1';
+                o_state             <= o_state_reg;
+                current_round       <= round10;           
             when others =>
               current_round <= round0;
             end case;

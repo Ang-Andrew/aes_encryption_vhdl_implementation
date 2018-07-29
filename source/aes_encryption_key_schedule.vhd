@@ -56,21 +56,21 @@ begin
     bitwise_xor_1 : entity work.bitwise_xor_word
         port map(
             i_word1         => temp_key_out(0),
-            i_word2         => reg_4(1),
+            i_word2         => reg_4(0),
             o_word          => temp_key_out(1)
     );
 
     bitwise_xor_2 : entity work.bitwise_xor_word
         port map(
             i_word1         => temp_key_out(1),
-            i_word2         => reg_4(2),
+            i_word2         => reg_4(1),
             o_word          => temp_key_out(2)
         );
         
     bitwise_xor_3 : entity work.bitwise_xor_word
         port map(
             i_word1         => temp_key_out(2),
-            i_word2         => reg_4(3),
+            i_word2         => reg_4(2),
             o_word          => temp_key_out(3)
         ); 
     
