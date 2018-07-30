@@ -23,13 +23,15 @@ architecture Behavioral of aes_encryption_key_schedule_tb is
     Port ( 
         clock                   : in std_logic;
         i_key                   : in Key;
-        o_key_schedule          : out Key_schedule                           
+        i_rcon_sel              : in integer;
+        o_key                   : out Key                           
     );
     end component aes_encryption_key_schedule;
     
     signal tb_key               : Key;
-    signal tb_key_schedule      : Key_schedule;
+    signal tb_key_out           : Key;
     signal tb_clock             : std_logic;
+    signal tb_round             : integer range 0 to 10 := 0;
     constant clk_period         : time := 10 ns;
 
 
@@ -38,12 +40,14 @@ begin
     uut: aes_encryption_key_schedule port map(
         clock   => tb_clock,
         i_key   => tb_key,
-        o_key_schedule => tb_key_schedule                 
+        o_key   => tb_key_out,
+        i_rcon_sel => tb_round                
     );
     
     stim_proc : process
     begin
-        tb_key <= ((x"2b",x"7e",x"15",x"16"),(x"28",x"ae",x"d2",x"a6"),(x"ab",x"f7",x"15",x"88"),(x"09",x"cf",x"4f",x"3c"));
+        --tb_key <= ((x"2b",x"7e",x"15",x"16"),(x"28",x"ae",x"d2",x"a6"),(x"ab",x"f7",x"15",x"88"),(x"09",x"cf",x"4f",x"3c"));
+        tb_key  <= ((x"a0",x"fa",x"fe",x"17"),(x"88",x"54",x"2c",x"b1"),(x"23",x"a3",x"39",x"39"),(x"2a",x"6c",x"76",x"05"));
         wait for 1 ps;
     end process;
     

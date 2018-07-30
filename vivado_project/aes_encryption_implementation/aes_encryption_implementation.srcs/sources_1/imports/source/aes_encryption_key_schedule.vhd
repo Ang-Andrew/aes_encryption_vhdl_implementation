@@ -92,8 +92,8 @@ begin
         reg_3       <= reg_2;
         reg_4       <= reg_3;
         
-        o_key_reg   <= temp_key_out;
-        o_key       <= o_key_reg;           
+        o_key       <= temp_key_out;
+        --o_key       <= o_key_reg;           
 
     end if;
   end process;

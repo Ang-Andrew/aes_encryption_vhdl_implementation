@@ -95,7 +95,7 @@ begin
         else
             case current_round is
             when round0 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     o_valid         <= '0';
                     state_counter   <= state_counter + 1;
                     s0_reg_1        <= first_output_state;
@@ -104,6 +104,9 @@ begin
                     s0_reg_4        <= s0_reg_3;
                     s0_reg_5        <= s0_reg_4;
                     current_round   <= round0;
+                    key_schedule_input <=  i_key;
+                    current_round_num <= 0;
+
                 else
                     -- state and key calculation should be ready
                     current_state   <= s0_reg_5;
@@ -112,9 +115,11 @@ begin
                     state_counter   <= 0;
                 end if;      
             when round1 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round1;
+                    key_schedule_input <=  current_key;
+                    current_round_num <= 1;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -123,9 +128,10 @@ begin
                     current_round   <= round2;
                 end if;
             when round2 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round2;
+                    current_round_num <= 2;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -134,9 +140,10 @@ begin
                     current_round   <= round3;
                 end if;
             when round3 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round3;
+                    current_round_num <= 3;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -145,9 +152,10 @@ begin
                     current_round   <= round4;
                 end if;
             when round4 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round4;
+                    current_round_num <= 4;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -156,9 +164,10 @@ begin
                     current_round   <= round5;
                 end if;
             when round5 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round5;
+                    current_round_num <= 5;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -167,9 +176,10 @@ begin
                     current_round   <= round6;
                 end if;
             when round6 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round6;
+                    current_round_num <= 6;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -178,9 +188,10 @@ begin
                     current_round   <= round7;
                 end if;
             when round7 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round7;
+                    current_round_num <= 7;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -189,9 +200,10 @@ begin
                     current_round   <= round8;
                 end if;
             when round8 =>
-                if state_counter < 5 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round8;
+                    current_round_num <= 8;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
@@ -203,6 +215,7 @@ begin
                 if state_counter < 3 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round9;
+                    current_round_num <= 9;
                 else
                     -- state and key calcaulation are done
                     final_state_input   <= output_state;

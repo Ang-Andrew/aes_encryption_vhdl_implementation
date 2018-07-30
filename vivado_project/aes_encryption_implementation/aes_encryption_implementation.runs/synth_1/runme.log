@@ -698,3 +698,6 @@ INFO: [Common 17-1381] The checkpoint 'D:/vivado_projects/aes_encryption_impleme
 INFO: [runtcl-4] Executing : report_utilization -file aes_encryption_implementation_top_utilization_synth.rpt -pb aes_encryption_implementation_top_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 848.738 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Fri Jun 29 23:10:53 2018...
+
+*** Halting run - EA reset detected ***
+

@@ -1,9 +1,14 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
 "../../../../aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_lib.vhd" \
+
+vhdl2008 xil_defaultlib  \
 "../../../../aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_sbox.vhd" \
 "../../../../aes_encryption_implementation.srcs/sources_1/imports/source/g_function.vhd" \
+"../../../../aes_encryption_implementation.srcs/sources_1/new/bitwise_xor_word.vhd" \
 "../../../../aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_key_schedule.vhd" \
+
+vhdl xil_defaultlib  \
 "../../../../aes_encryption_implementation.srcs/sim_1/new/aes_encryption_key_schedule_tb.vhd" \
 
 # Do not sort compile order
