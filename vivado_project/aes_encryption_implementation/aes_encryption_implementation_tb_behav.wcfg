@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="60000000fs"></ZoomStartTime>
-      <ZoomEndTime time="222300001fs"></ZoomEndTime>
-      <Cursor1Time time="145000000fs"></Cursor1Time>
+      <ZoomStartTime time="650000000fs"></ZoomStartTime>
+      <ZoomEndTime time="812300001fs"></ZoomEndTime>
+      <Cursor1Time time="775000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="195"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="22" />
+   <WVObjectSize size="23" />
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/clock" type="logic">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
@@ -83,6 +83,10 @@
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/i_key" type="array">
       <obj_property name="ElementShortName">i_key[0:3][0:3][7:0]</obj_property>
       <obj_property name="ObjectShortName">i_key[0:3][0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/i_rcon_sel" type="other">
+      <obj_property name="ElementShortName">i_rcon_sel</obj_property>
+      <obj_property name="ObjectShortName">i_rcon_sel</obj_property>
    </wvobject>
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/reg_1" type="array">
       <obj_property name="ElementShortName">reg_1[0:2][0:3][7:0]</obj_property>

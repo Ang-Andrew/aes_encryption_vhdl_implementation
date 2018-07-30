@@ -41,7 +41,7 @@ architecture Behavioral of aes_encryption_implementation is
   signal final_state_input          : State;
   signal final_round_input_state    : State;
   signal output_key                 : Key;
-  signal current_round_num          : integer range 1 to 10 := 1;
+  signal current_round_num          : integer range 0 to 10 := 0;
   signal key_schedule_input         : Key;
   
   signal s0_reg_1                   : State;
@@ -111,7 +111,9 @@ begin
                     -- state and key calculation should be ready
                     current_state   <= s0_reg_5;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     current_round   <= round1;
+                    current_round_num <= 1;
                     state_counter   <= 0;
                 end if;      
             when round1 =>
@@ -119,103 +121,110 @@ begin
                     state_counter   <= state_counter + 1;
                     current_round   <= round1;
                     key_schedule_input <=  current_key;
-                    current_round_num <= 1;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round2;
+                    current_round_num <= 2;
                 end if;
             when round2 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round2;
-                    current_round_num <= 2;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round3;
+                    current_round_num <= 3;
                 end if;
             when round3 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round3;
-                    current_round_num <= 3;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round4;
+                    current_round_num <= 4;
                 end if;
             when round4 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round4;
-                    current_round_num <= 4;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
-                    current_round   <= round5;
+                    current_round   <= round5;                    
+                    current_round_num <= 5;
                 end if;
             when round5 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round5;
-                    current_round_num <= 5;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round6;
+                    current_round_num <= 6;
                 end if;
             when round6 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round6;
-                    current_round_num <= 6;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round7;
+                    current_round_num <= 7;
                 end if;
             when round7 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round7;
-                    current_round_num <= 7;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round8;
+                    current_round_num <= 8;
                 end if;
             when round8 =>
                 if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round8;
-                    current_round_num <= 8;
                 else
                     -- state and key calcaulation are done
                     current_state   <= output_state;
                     current_key     <= output_key;
+                    key_schedule_input <= output_key;
                     state_counter   <= 0;
                     current_round   <= round9;
+                    current_round_num <= 9;
                 end if;
             when round9 =>
                 if state_counter < 3 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round9;
-                    current_round_num <= 9;
                 else
                     -- state and key calcaulation are done
                     final_state_input   <= output_state;

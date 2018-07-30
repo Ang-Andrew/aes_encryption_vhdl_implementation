@@ -1,4 +1,4 @@
-Running: xsim.dir/aes_encryption_implementation_tb_behav/xsimk.exe -simmode gui -wdb aes_encryption_implementation_tb_behav.wdb -simrunnum 0 -socket 50243
+Running: xsim.dir/aes_encryption_implementation_tb_behav/xsimk.exe -simmode gui -wdb aes_encryption_implementation_tb_behav.wdb -simrunnum 0 -socket 50372
 Design successfully loaded
 Design Loading Memory Usage: 5024 KB (Peak: 5024 KB)
 Design Loading CPU Usage: 0 ms
