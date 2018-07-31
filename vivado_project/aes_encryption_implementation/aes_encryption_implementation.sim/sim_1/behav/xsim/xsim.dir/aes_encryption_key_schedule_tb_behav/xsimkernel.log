@@ -2,3 +2,6 @@ Running: xsim.dir/aes_encryption_key_schedule_tb_behav/xsimk.exe -simmode gui -w
 Design successfully loaded
 Design Loading Memory Usage: 4884 KB (Peak: 4884 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5572 KB (Peak: 5572 KB)
+Simulation CPU Usage: 62 ms

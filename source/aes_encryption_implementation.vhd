@@ -30,7 +30,7 @@ architecture Behavioral of aes_encryption_implementation is
 
   signal key_schedule : Key_schedule;
   type round_num is (round0, round1, round2, round3, round4,
-                     round5, round6, round7, round8, round9, round10);
+                     round5, round6, round7, round8, round9, round10, round11);
 
   signal current_round              : round_num;
   signal current_state              : State;
@@ -39,6 +39,7 @@ architecture Behavioral of aes_encryption_implementation is
   signal output_state               : State;
   signal o_state_reg                : State;                    
   signal final_state_input          : State;
+  signal final_key_input            : Key;
   signal final_round_input_state    : State;
   signal output_key                 : Key;
   signal current_round_num          : integer range 0 to 10 := 0;
@@ -83,7 +84,7 @@ begin
     port map(
       clock   => clock,
       i_state => final_state_input,
-      i_key   => current_key,
+      i_key   => final_key_input,
       o_state => o_state_reg
       );
 
@@ -222,20 +223,31 @@ begin
                     current_round_num <= 9;
                 end if;
             when round9 =>
-                if state_counter < 3 then
+                if state_counter < 7 then
                     state_counter   <= state_counter + 1;
                     current_round   <= round9;
                 else
                     -- state and key calcaulation are done
+                    --key_schedule_input  <= output_key;
                     final_state_input   <= output_state;
+                    final_key_input     <= output_key;
+                    current_state       <= output_state;     
                     current_key         <= output_key;
                     state_counter       <= 0;
                     current_round       <= round10;
                 end if;
             when round10 =>
-                o_valid             <= '1';
-                o_state             <= o_state_reg;
-                current_round       <= round10;           
+                if state_counter < 3 then
+                    state_counter   <= state_counter + 1;
+                    current_round   <= round10;
+                else
+                    o_valid         <= '1';
+                    o_state         <= o_state_reg;
+                    current_round   <= round11;
+                    state_counter   <= 0; 
+                end if;              
+            when round11 =>
+                current_round       <= round11;
             when others =>
               current_round <= round0;
             end case;

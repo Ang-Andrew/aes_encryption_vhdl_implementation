@@ -11,18 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="650000000fs"></ZoomStartTime>
-      <ZoomEndTime time="812300001fs"></ZoomEndTime>
-      <Cursor1Time time="775000000fs"></Cursor1Time>
+      <ZoomStartTime time="694490000fs"></ZoomStartTime>
+      <ZoomEndTime time="1019890001fs"></ZoomEndTime>
+      <Cursor1Time time="825000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <NameColumnWidth column_width="191"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="23" />
+   <WVObjectSize size="22" />
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/clock" type="logic">
       <obj_property name="ElementShortName">clock</obj_property>
       <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/i_key" type="array">
       <obj_property name="ElementShortName">i_key[0:3][0:3][7:0]</obj_property>
@@ -32,17 +36,25 @@
       <obj_property name="ElementShortName">i_state[0:3][0:3][7:0]</obj_property>
       <obj_property name="ObjectShortName">i_state[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/current_round" type="other">
-      <obj_property name="ElementShortName">current_round</obj_property>
-      <obj_property name="ObjectShortName">current_round</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/o_state" type="array">
+      <obj_property name="ElementShortName">o_state[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_state[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/state_counter" type="other">
-      <obj_property name="ElementShortName">state_counter</obj_property>
-      <obj_property name="ObjectShortName">state_counter</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/o_valid" type="logic">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule" type="array">
+      <obj_property name="ElementShortName">key_schedule[0:43][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">key_schedule[0:43][0:3][7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/current_round_num" type="other">
       <obj_property name="ElementShortName">current_round_num</obj_property>
       <obj_property name="ObjectShortName">current_round_num</obj_property>
+   </wvobject>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/current_round" type="other">
+      <obj_property name="ElementShortName">current_round</obj_property>
+      <obj_property name="ObjectShortName">current_round</obj_property>
    </wvobject>
    <wvobject fp_name="/aes_encryption_implementation_tb/uut/current_state" type="array">
       <obj_property name="ElementShortName">current_state[0:3][0:3][7:0]</obj_property>
@@ -52,64 +64,48 @@
       <obj_property name="ElementShortName">current_key[0:3][0:3][7:0]</obj_property>
       <obj_property name="ObjectShortName">current_key[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/output_key" type="array">
-      <obj_property name="ElementShortName">output_key[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">output_key[0:3][0:3][7:0]</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/state_counter" type="other">
+      <obj_property name="ElementShortName">state_counter</obj_property>
+      <obj_property name="ObjectShortName">state_counter</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/s0_reg_1" type="array">
-      <obj_property name="ElementShortName">s0_reg_1[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">s0_reg_1[0:3][0:3][7:0]</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/final_state_input" type="array">
+      <obj_property name="ElementShortName">final_state_input[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">final_state_input[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/s0_reg_2" type="array">
-      <obj_property name="ElementShortName">s0_reg_2[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">s0_reg_2[0:3][0:3][7:0]</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/output_state" type="array">
+      <obj_property name="ElementShortName">output_state[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">output_state[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/s0_reg_3" type="array">
-      <obj_property name="ElementShortName">s0_reg_3[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">s0_reg_3[0:3][0:3][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/s0_reg_4" type="array">
-      <obj_property name="ElementShortName">s0_reg_4[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">s0_reg_4[0:3][0:3][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/s0_reg_5" type="array">
-      <obj_property name="ElementShortName">s0_reg_5[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">s0_reg_5[0:3][0:3][7:0]</obj_property>
-   </wvobject>
-   <wvobject type="divider" fp_name="divider64">
-      <obj_property name="label">key_schedule</obj_property>
+   <wvobject type="divider" fp_name="divider41">
+      <obj_property name="label">last round</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/i_key" type="array">
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/i_state" type="array">
+      <obj_property name="ElementShortName">i_state[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_state[0:3][0:3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/i_key" type="array">
       <obj_property name="ElementShortName">i_key[0:3][0:3][7:0]</obj_property>
       <obj_property name="ObjectShortName">i_key[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/i_rcon_sel" type="other">
-      <obj_property name="ElementShortName">i_rcon_sel</obj_property>
-      <obj_property name="ObjectShortName">i_rcon_sel</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/o_state" type="array">
+      <obj_property name="ElementShortName">o_state[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_state[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/reg_1" type="array">
-      <obj_property name="ElementShortName">reg_1[0:2][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_1[0:2][0:3][7:0]</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/i_key_reg" type="array">
+      <obj_property name="ElementShortName">i_key_reg[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_key_reg[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/reg_2" type="array">
-      <obj_property name="ElementShortName">reg_2[0:2][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_2[0:2][0:3][7:0]</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/i_key_reg_2" type="array">
+      <obj_property name="ElementShortName">i_key_reg_2[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_key_reg_2[0:3][0:3][7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/reg_3" type="array">
-      <obj_property name="ElementShortName">reg_3[0:2][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_3[0:2][0:3][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/reg_4" type="array">
-      <obj_property name="ElementShortName">reg_4[0:2][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_4[0:2][0:3][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/temp_key_out" type="array">
-      <obj_property name="ElementShortName">temp_key_out[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">temp_key_out[0:3][0:3][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/aes_encryption_implementation_tb/uut/key_schedule_1/o_key" type="array">
-      <obj_property name="ElementShortName">o_key[0:3][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">o_key[0:3][0:3][7:0]</obj_property>
+   <wvobject fp_name="/aes_encryption_implementation_tb/uut/aes_last_round_1/o_state_reg" type="array">
+      <obj_property name="ElementShortName">o_state_reg[0:3][0:3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_state_reg[0:3][0:3][7:0]</obj_property>
    </wvobject>
 </wave_config>
