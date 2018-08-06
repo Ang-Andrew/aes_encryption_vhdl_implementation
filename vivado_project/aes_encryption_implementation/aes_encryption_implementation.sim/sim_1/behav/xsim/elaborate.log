@@ -1,6 +1,6 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: F:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 32ba1800294b4335a059dc7c1c7eb1ce --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot aes_encryption_implementation_tb_behav xil_defaultlib.aes_encryption_implementation_tb -log elaborate.log 
+Running: F:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 32ba1800294b4335a059dc7c1c7eb1ce --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot aes_encryption_wrapper_tb_behav xil_defaultlib.aes_encryption_wrapper_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -24,5 +24,6 @@ Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_key_ad
 Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_round [aes_encryption_round_default]
 Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_last_round [aes_encryption_last_round_defaul...]
 Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_implementation [aes_encryption_implementation_de...]
-Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_implementation_tb
-Built simulation snapshot aes_encryption_implementation_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_wrapper [aes_encryption_wrapper_default]
+Compiling architecture behavioral of entity xil_defaultlib.aes_encryption_wrapper_tb
+Built simulation snapshot aes_encryption_wrapper_tb_behav
