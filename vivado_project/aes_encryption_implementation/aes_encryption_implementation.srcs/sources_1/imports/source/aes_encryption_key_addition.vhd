@@ -17,7 +17,6 @@ use work.aes_encryption_lib.all;
 
 entity aes_encryption_key_addition is
   port (
-    clock   : in  std_logic;
     i_state : in  State;
     i_key   : in  Key;
     o_state : out State

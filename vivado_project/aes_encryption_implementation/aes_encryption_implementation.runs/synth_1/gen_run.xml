@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1532836982">
-  <File Type="PA-TCL" Name="aes_encryption_implementation.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="aes_encryption_implementation_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="aes_encryption_implementation_reports.tcl"/>
-  <File Type="RDS-RDS" Name="aes_encryption_implementation.vds"/>
-  <File Type="RDS-UTIL" Name="aes_encryption_implementation_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="aes_encryption_implementation_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="aes_encryption_implementation.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="aes_encryption_implementation_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="aes_encryption_implementation_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1534073941">
+  <File Type="PA-TCL" Name="aes_encryption_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="aes_encryption_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="aes_encryption_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="aes_encryption_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="aes_encryption_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="aes_encryption_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="aes_encryption_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="aes_encryption_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="aes_encryption_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_lib.vhd">
@@ -57,6 +57,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/bitwise_xor_state.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_mixColumns.vhd">
       <FileInfo SFType="VHDL2008">
         <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_mixColumns.vhd"/>
@@ -89,6 +95,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_implementation.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_implementation.vhd"/>
+        <Attr Name="ImportTime" Val="1531740019"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/source/mult_by_2.vhd">
       <FileInfo SFType="VHDL2008">
         <Attr Name="ImportPath" Val="$PPRDIR/../../source/mult_by_2.vhd"/>
@@ -105,17 +119,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/source/aes_encryption_implementation.vhd">
+    <File Path="$PSRCDIR/sources_1/new/aes_encryption_wrapper.vhd">
       <FileInfo SFType="VHDL2008">
-        <Attr Name="ImportPath" Val="$PPRDIR/../../source/aes_encryption_implementation.vhd"/>
-        <Attr Name="ImportTime" Val="1531740019"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/aes_encryption_pynq_test_unit.vhd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="aes_encryption_implementation"/>
+      <Option Name="TopModule" Val="aes_encryption_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -132,7 +151,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

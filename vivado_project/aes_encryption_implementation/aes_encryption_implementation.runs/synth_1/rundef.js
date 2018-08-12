@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log aes_encryption_implementation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_encryption_implementation.tcl" );
+         "-log aes_encryption_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_encryption_wrapper.tcl" );
 
 
 

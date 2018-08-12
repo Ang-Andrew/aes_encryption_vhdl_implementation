@@ -1,0 +1,53 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1_AR70908 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sun Aug 12 21:41:20 2018
+| Host         : ANDREWPC running 64-bit major release  (build 9200)
+| Command      : report_methodology -file aes_encryption_wrapper_methodology_drc_routed.rpt -pb aes_encryption_wrapper_methodology_drc_routed.pb -rpx aes_encryption_wrapper_methodology_drc_routed.rpx
+| Design       : aes_encryption_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_aes_encryption_wrapper
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 3
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay                   | 2          |
+| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten | 1          |
++-----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on reset relative to clock(s) clock
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on o_valid relative to clock(s) clock
+Related violations: <none>
+
+XDCC-5#1 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property IOSTANDARD on clock overrides a previous user property.
+New Source: D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/constrs_1/new/aes_encryption_implementation.xdc (Line: 10)
+Previous Source: D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/constrs_1/new/aes_encryption_implementation.xdc (Line: 1)
+Related violations: <none>
+
+

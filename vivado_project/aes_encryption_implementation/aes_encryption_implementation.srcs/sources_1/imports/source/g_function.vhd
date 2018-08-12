@@ -30,8 +30,7 @@ architecture Behavioral of g_function is
   signal sub_out_reg      : Word;
   signal rcon_in_reg    : Word;
   signal rcon_out_reg : Word;
-  signal word2_addition_reg : Word;
-  signal rcon_sel_reg   : integer;    
+  signal word2_addition_reg : Word; 
   signal word_reg       : Word;
   signal word2_reg      : Word;
   signal word2_reg2     : Word;

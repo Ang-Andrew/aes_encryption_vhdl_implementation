@@ -70,7 +70,6 @@ begin
 
   addRoundKey_process : entity work.aes_encryption_key_addition
     port map(
-      clock   => clock,
       i_state => mixColumns_out_reg,
       i_key   => key_reg_5,
       o_state => o_state_reg

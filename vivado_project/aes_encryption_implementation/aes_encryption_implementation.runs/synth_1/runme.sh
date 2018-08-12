@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log aes_encryption_implementation.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_encryption_implementation.tcl
+EAStep vivado -log aes_encryption_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_encryption_wrapper.tcl

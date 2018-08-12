@@ -55,7 +55,6 @@ begin
 
   addRoundKey_process : entity work.aes_encryption_key_addition
     port map(
-      clock   => clock,
       i_state => shiftRows_out,
       i_key   => i_key_reg_2,
       o_state => o_state_reg

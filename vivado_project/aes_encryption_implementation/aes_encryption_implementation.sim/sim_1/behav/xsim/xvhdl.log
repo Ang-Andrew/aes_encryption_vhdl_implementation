@@ -1,4 +1,6 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/new/aes_encryption_wrapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity aes_encryption_wrapper
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sim_1/new/aes_encryption_wrapper_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity aes_encryption_wrapper_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_rounds.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity aes_encryption_round
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_last_round.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity aes_encryption_last_round
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/git_repos/aes_encryption_vhdl_implementation/vivado_project/aes_encryption_implementation/aes_encryption_implementation.srcs/sources_1/imports/source/aes_encryption_implementation.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity aes_encryption_implementation

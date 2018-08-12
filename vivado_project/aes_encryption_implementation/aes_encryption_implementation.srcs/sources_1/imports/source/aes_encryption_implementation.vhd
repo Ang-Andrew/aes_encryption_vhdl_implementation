@@ -32,7 +32,7 @@ architecture Behavioral of aes_encryption_implementation is
   type round_num is (round0, round1, round2, round3, round4,
                      round5, round6, round7, round8, round9, round10, round11);
 
-  signal current_round              : round_num;
+  signal current_round              : round_num := round0;
   signal current_state              : State;
   signal current_key                : Key;
   signal first_output_state         : State;
@@ -51,7 +51,7 @@ architecture Behavioral of aes_encryption_implementation is
   signal s0_reg_4                   : State;
   signal s0_reg_5                   : State;
   
-  signal state_counter                 : integer range 0 to 5 := 0;
+  signal state_counter                 : integer range 0 to 7 := 0;
 
 begin
 
@@ -63,14 +63,20 @@ begin
           o_key          => output_key
           );
   
-    aes_first_round_key_addition:
-        for i in 0 to 3 generate
-            first_output_state(i) <= (i_state(i)(0) xor i_key(i)(0),
-                                       i_state(i)(1) xor i_key(i)(1),
-                                       i_state(i)(2) xor i_key(i)(2),
-                                       i_state(i)(3) xor i_key(i)(3));
-        end generate;
+--    aes_first_round_key_addition:
+--        for i in 0 to 3 generate
+--            first_output_state(i) <= (i_state(i)(0) xor i_key(i)(0),
+--                                       i_state(i)(1) xor i_key(i)(1),
+--                                       i_state(i)(2) xor i_key(i)(2),
+--                                       i_state(i)(3) xor i_key(i)(3));
+--        end generate;
   
+  aes_first_round_key_addition : entity work.bitwise_xor_state
+    port map(
+        state1      => i_state,
+        state2      => i_key,
+        o_state     => first_output_state
+    );
   
   aes_other_round : entity work.aes_encryption_round
     port map(
