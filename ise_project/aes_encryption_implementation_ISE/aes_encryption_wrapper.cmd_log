@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "D:/git_repos/aes_encryption_vhdl_implementation/aes_encryption_implementation_ISE/aes_encryption_wrapper.xst" -ofn "D:/git_repos/aes_encryption_vhdl_implementation/aes_encryption_implementation_ISE/aes_encryption_wrapper.syr" 
