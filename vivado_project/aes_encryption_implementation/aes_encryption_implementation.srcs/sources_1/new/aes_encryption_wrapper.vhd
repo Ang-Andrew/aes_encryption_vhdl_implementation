@@ -34,7 +34,19 @@ architecture Behavioral of aes_encryption_wrapper is
                                             (x"88",x"5a",x"30",x"8d"),
                                             (x"31",x"31",x"98",x"a2"),
                                             (x"e0",x"37",x"07",x"34"));
-    signal s_o_state      : State;
+    signal s_o_state_reg      : State;
+    signal s_o_state            : State;
+    
+--    component ila_0 IS
+--    PORT (
+--    clk : IN STD_LOGIC;
+--    probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+--        probe1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+--        probe2 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+--        probe3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+--        probe4 : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
+--    );
+--    END component;
                                            
     
 begin
@@ -48,5 +60,23 @@ begin
         o_state         => s_o_state,
         o_valid         => o_valid
     );
+    
+    process(clock,reset)
+    begin
+        if rising_edge(clock) then
+            s_o_state_reg <= s_o_state;
+        end if;
+    end process;
+    
+--    ila_0_1: ila_0
+--    port map(
+--        clk             => clock,
+--        probe0          => (0=>clock),
+--        probe1          => (s_o_state_reg(0)(3),s_o_state_reg(0)(2),s_o_state_reg(0)(1),s_o_state_reg(0)(0)),
+--        probe2          => (s_o_state_reg(1)(3),s_o_state_reg(1)(2),s_o_state_reg(1)(1),s_o_state_reg(1)(0)),
+--        probe3          => (s_o_state_reg(2)(3),s_o_state_reg(2)(2),s_o_state_reg(2)(1),s_o_state_reg(2)(0)),
+--        probe4          => (s_o_state_reg(3)(3),s_o_state_reg(3)(2),s_o_state_reg(3)(1),s_o_state_reg(3)(0))
+--    );
+
     
 end Behavioral;

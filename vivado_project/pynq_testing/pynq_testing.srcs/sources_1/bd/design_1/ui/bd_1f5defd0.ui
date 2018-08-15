@@ -1,0 +1,26 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 60 -defaultsOSRD
+preplace port o_valid -pg 1 -y 400 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 80 -defaultsOSRD
+preplace port reset -pg 1 -y 290 -defaultsOSRD
+preplace inst aes_encryption_wrapp_0 -pg 1 -lvl 1 -y 280 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -y 290 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 60 NJ
+preplace netloc aes_encryption_wrapp_0_o_valid 1 1 2 330J 400 NJ
+preplace netloc aes_encryption_wrapp_0_o_word1 1 1 1 350
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 80 NJ
+preplace netloc aes_encryption_wrapp_0_o_word2 1 1 1 350
+preplace netloc aes_encryption_wrapp_0_o_word3 1 1 1 320
+preplace netloc aes_encryption_wrapp_0_o_word4 1 1 1 320
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 380 340
+preplace netloc reset_0_1 1 0 1 N
+levelinfo -pg 1 0 170 440 550 -top 0 -bot 420
+",
+}
+{
+   da_ps7_cnt: "2",
+}

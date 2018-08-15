@@ -1,0 +1,748 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1_AR70908 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Wed Aug 15 21:08:44 2018
+| Host         : ANDREWPC running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 142
++-----------+----------+-------------------------------------------------+------------+
+| Rule      | Severity | Description                                     | Violations |
++-----------+----------+-------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                    | 4          |
+| PDRC-190  | Warning  | Suboptimally placed synchronized register chain | 16         |
+| TIMING-16 | Warning  | Large setup violation                           | 121        |
+| TIMING-18 | Warning  | Missing input or output delay                   | 1          |
++-----------+----------+-------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1__0, with 2 or more inputs, drives asynchronous reset pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1__0, with 2 or more inputs, drives asynchronous reset pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous reset pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous reset pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X35Y94 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X33Y96 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X32Y96 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X34Y94 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X35Y96 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X35Y98 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X34Y96 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[12] in site SLICE_X33Y93 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[11] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[20] in site SLICE_X33Y92 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[19] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[4] in site SLICE_X33Y94 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD4/shift_reg_in_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#11 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[10] in site SLICE_X44Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[9] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#12 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[2] in site SLICE_X44Y124 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD5/shift_reg_in_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#13 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/shift_reg_in_reg[0] in site SLICE_X33Y89 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#14 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X33Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#15 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X35Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#16 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X34Y90 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.001 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.002 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.009 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.011 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.014 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.036 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/FLAG1_O_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.041 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.045 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.082 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.084 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.091 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.098 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.098 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.100 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.103 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.107 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.118 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.120 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.121 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.123 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.124 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[16]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.133 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[16]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.138 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.139 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.141 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -1.144 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -1.155 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -1.157 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -1.170 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -1.170 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -1.170 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/FLAG0_O_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -1.172 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -1.175 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -1.176 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -1.179 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/CAPTURE_O_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -1.183 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/trigger_reg/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -1.186 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -1.219 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -1.236 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -1.240 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -1.252 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -1.265 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -1.265 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -1.275 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -1.283 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -1.288 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -1.318 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -1.321 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -1.323 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -1.325 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -1.338 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -1.370 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -1.389 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -1.436 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[15]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -1.436 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -1.577 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[0]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -1.577 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[13]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -1.577 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[14]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -1.577 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[7]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[0]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[8]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[9]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[10]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[12]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[16]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -1.593 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[5]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -1.600 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[13]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -1.600 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[14]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -1.600 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[15]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -1.600 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[8]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -1.601 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[0]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -1.601 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[16]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -1.601 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -1.601 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[4]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -1.625 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[2]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -1.625 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[3]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -1.625 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[4]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -1.625 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[8]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -1.641 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[10]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -1.641 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -1.641 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[2]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -1.647 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[11]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -1.647 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[9]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -1.674 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[15]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -1.674 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[5]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -1.674 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[6]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -1.674 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[7]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -1.677 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[0]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -1.677 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[12]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -1.677 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[13]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -1.677 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[16]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -1.726 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[11]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -1.726 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[16]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -1.726 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[11]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -1.726 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[6]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -1.726 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[3].U_COUNTER/counter_reg[9]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[10]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[5]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[7]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -1.735 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[12]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -1.735 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[2]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -1.735 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[3]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -1.735 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[4]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -1.740 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[13]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -1.740 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[14]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -1.740 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[5]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -1.740 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[7]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[12]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[2]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[3]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -1.741 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[0].U_COUNTER/counter_reg[6]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -1.790 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[11]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -1.790 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[3]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -1.790 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[8]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -1.790 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[9]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#117 Warning
+Large setup violation  
+There is a large setup violation of -1.791 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[10]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#118 Warning
+Large setup violation  
+There is a large setup violation of -1.791 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[15]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#119 Warning
+Large setup violation  
+There is a large setup violation of -1.791 ns between design_1_i/ila_0/U0/ila_core_inst/ADV_TRIG.u_adv_trig/current_state_reg[1]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[2].U_COUNTER/counter_reg[6]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#120 Warning
+Large setup violation  
+There is a large setup violation of -1.825 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[14]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#121 Warning
+Large setup violation  
+There is a large setup violation of -1.825 ns between design_1_i/ila_0/U0/ila_core_inst/u_trig/TRIGGER_EQ_reg[22]/C (clocked by clk_fpga_0) and design_1_i/ila_0/U0/ila_core_inst/COUNTER.u_count/G_COUNTER[1].U_COUNTER/counter_reg[4]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on reset relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+
